@@ -28,10 +28,15 @@ function App() {
           justifyContent: "center",
         }}
       >*/}
-      <div id={"navbar"}>
-        <Button id={"searchModeButton"} onClick={random} variant="outlined" style={{margin: "10px"}}> Random Anime Quote </Button>
-        <Button id={"searchModeButton"} onClick={animeTitle} variant="outlined" style={{margin: "10px"}}> Anime Title </Button>
-        <Button id={"searchModeButton"} onClick={characterName} variant="outlined" style={{margin: "10px"}}>Character Name </Button>
+      <div className={"navbar"}>
+        <div className={"dropdown"}>
+          <Button className={"dropdownbtn"} variant="outlined"></Button>
+          <div className="dropdown-content">
+            <Button id={"searchModeButtonA"} onClick={random} variant="outlined" style={{margin: "10px"}}> Random Anime Quote </Button>
+            <Button id={"searchModeButtonB"} onClick={animeTitle} variant="outlined" style={{margin: "10px"}}> Anime Title </Button>
+            <Button id={"searchModeButtonC"} onClick={characterName} variant="outlined" style={{margin: "10px"}}>Character Name </Button>
+          </div>
+        </div>
       </div>
         
       {/*</Grid>*/}
@@ -61,7 +66,7 @@ function App() {
       
       </div>
 
-      <div style={{margin: "auto", maxWidth: "80%"}}>
+      <div style={{margin: "auto", maxWidth: "80%", }}>
       {inputInfo === undefined ? (
         <Grid
           container
@@ -102,14 +107,31 @@ function App() {
 
   function random() {
     searchMode = "Random";
+    document.getElementById("searchModeButtonA")!.id = "searchModeButton2A";
+    document.getElementById("searchModeButton2B")!.id = "searchModeButtonB";
+    document.getElementById("searchModeButton2C")!.id = "searchModeButtonC";
   }
 
   function animeTitle() {
     searchMode = "Anime Title";
+    document.getElementById("searchModeButtonB")!.id = "searchModeButton2B";
+    document.getElementById("searchModeButton2A")!.id = "searchModeButtonA";
+    document.getElementById("searchModeButton2C")!.id = "searchModeButtonC";
   }
 
   function characterName() {
     searchMode = "Character Name";
+    document.getElementById("searchModeButtonC")!.id = "searchModeButton2C";
+    document.getElementById("searchModeButton2B")!.id = "searchModeButtonB";
+    document.getElementById("searchModeButton2A")!.id = "searchModeButtonA";
+  }
+
+  function bgcSearchMode(searchMode: any) {
+    if (searchMode === "Random") {
+      return "red";
+    } else {
+      return "green";
+    }
   }
 
   function search(){
@@ -133,6 +155,9 @@ function App() {
         //.then(quotes => console.log(quotes))
       //console.log("characterName")
     }
+    document.getElementById("searchModeButtonA")!.id = "searchModeButton2A";
+    document.getElementById("searchModeButton2B")!.id = "searchModeButtonB";
+    document.getElementById("searchModeButton2C")!.id = "searchModeButtonC";
 }
 }
 

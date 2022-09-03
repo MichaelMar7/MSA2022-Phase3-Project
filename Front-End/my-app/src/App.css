@@ -6,19 +6,74 @@ h1 {
   text-align: center;
 }
 
-.searchModeField {
+.searchModeField { /*un-useds*/
   margin: "10px";
   justify-content: center;
   align-items: center;
 }
 
-#searchModeButton {
+#searchModeButtonA {
   display: inline;
   padding: 15px;
 }
 
-#navbar {
+#searchModeButtonB {
+  display: inline;
+  padding: 15px;
+}
+
+#searchModeButtonC {
+  display: inline;
+  padding: 15px;
+}
+
+#searchModeButton2A {
+  display: inline;
+  padding: 15px;
+  background-color: #AAAAAA;
+}
+
+#searchModeButton2B {
+  display: inline;
+  padding: 15px;
+  background-color: #AAAAAA;
+}
+
+#searchModeButton2C {
+  display: inline;
+  padding: 15px;
+  background-color: #FFAAAA;
+}
+
+.navbar {
   margin: 10px;
   display: flex;
   justify-content: center;
+}
+
+.dropdown {
+
+}
+
+.dropdown-content {
+
+}
+
+.dropdownbtn {
+	opacity: 0%;
+}
+
+@media (max-width: 640px) {
+
+  .dropdown {float: left; overflow: hidden;}
+  .dropdown .dropdownbtn {
+    opacity: 100%;
+		display: inline-block;
+		margin: 10px; 
+		width: 80px; 
+		height: 60px;}
+  .dropdown:hover .dropdown-content {display: block;}
+  .dropdown-content {display: none; position: absolute; background-color: white;}
+  .dropdown-content Button {float: none; display: block; }
+  #searchModeButton2C {background-color: #FF9999;}
 }
