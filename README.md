@@ -11,6 +11,9 @@ One change I made that is not related to the advanced features is a (still not p
 Now for my advanced features that I've implemented:
 - UI Scalability with window size
 - Mobile first development (using media query breakpoints, etc)
+- Vercel
+- Storybook
+- Unit Testing
 
 ## Data Science Module
 
