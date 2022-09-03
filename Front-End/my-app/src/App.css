@@ -1,0 +1,18 @@
+body {
+  background-color: #EEEEEE;
+}
+
+h1 {
+  text-align: center;
+}
+
+.searchModeField {
+  margin: "10px";
+  justify-content: center;
+  align-items: center;
+}
+
+#searchModeButton {
+  display: inline;
+  padding: 15px;
+}
