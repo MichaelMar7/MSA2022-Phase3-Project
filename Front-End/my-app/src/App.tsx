@@ -10,7 +10,7 @@ function App() {
   const [inputInfo, setInputInfo] = useState<undefined | any>(undefined);
   let searchMode = "Random";
   return (
-    <div style={{margin: "10px"}}>
+    <div style={{margin: "auto", width: "90%"}}>
       <h1> Anime Random Quotes Displayer </h1>
       <p>
           This is an React Typescript API application that displays random quotes from anime provided by the third party API <strong style={{color:"green"}}> AnimeChan </strong> created by <strong> rocktimsaikia </strong>. The url for the api is <a href="https://animechan.vercel.app/"> https://animechan.vercel.app/</a>. 
@@ -19,18 +19,22 @@ function App() {
         In API applicaiton allows the user to generate a <u> random anime quote from the API</u>, generate a random quote from a specific <u> Anime Title</u>, or generate a random quote from a specific <u> Anime Character</u>.
       </p>
 
-      <Grid
+      {/* Change without using mui */}
+      {/*<Grid
         container
         direction="row"
         sx={{
           margin: "10px",
           justifyContent: "center",
         }}
-      >
+      >*/}
+      <div id={"navbar"}>
         <Button id={"searchModeButton"} onClick={random} variant="outlined" style={{margin: "10px"}}> Random Anime Quote </Button>
         <Button id={"searchModeButton"} onClick={animeTitle} variant="outlined" style={{margin: "10px"}}> Anime Title </Button>
         <Button id={"searchModeButton"} onClick={characterName} variant="outlined" style={{margin: "10px"}}>Character Name </Button>
-      </Grid>
+      </div>
+        
+      {/*</Grid>*/}
       <p style={{textAlign: "center", marginTop: "5px"}}> Remember to click on one of the three button before searching (otherwise it would default to "Random" after each search). </p>
 
       <div style={{ display: "flex", justifyContent: "center" }}>
@@ -57,14 +61,15 @@ function App() {
       
       </div>
 
-      <div style={{maxWidth: "1800px"}}>
+      <div style={{margin: "auto", maxWidth: "80%"}}>
       {inputInfo === undefined ? (
         <Grid
           container
           direction="row"
           spacing={5}
           sx={{
-            margin: "20px",
+            width: "100%",
+            margin: "20px auto",
             textAlign: 'center',
             justifyContent: "center",
           }}
@@ -77,7 +82,8 @@ function App() {
           direction="row"
           spacing={5}
           sx={{
-            margin: "20px",
+            width: "100%",
+            margin: "20px auto",
             textAlign: 'center',
             justifyContent: "center",
             backgroundColor: "white",

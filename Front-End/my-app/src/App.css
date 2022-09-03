@@ -16,3 +16,9 @@ h1 {
   display: inline;
   padding: 15px;
 }
+
+#navbar {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
