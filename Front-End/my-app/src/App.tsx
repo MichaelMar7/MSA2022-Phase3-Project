@@ -4,10 +4,12 @@ import SearchIcon from "@mui/icons-material/Search";
 import TextField from "@mui/material/TextField";
 import './App.css';
 import { Box, Button, Grid, Paper, Skeleton } from "@mui/material";
+//import {bounce} from "react-animations";
 
 function App() {
   const [input, setInput] = useState("");
   const [inputInfo, setInputInfo] = useState<undefined | any>(undefined);
+  //const Bounce = styled.div`animation: 2s ${keyframes `${bounce}`} infinite`
   let searchMode = "Random";
   return (
     <div style={{margin: "auto", width: "90%"}}>
@@ -33,9 +35,9 @@ function App() {
         <div className={"dropdown"}>
           <Button className={"dropdownbtn"} variant="outlined"></Button>
           <div className="dropdown-content">
-            <Button id={"searchModeButtonA"} onClick={random} variant="outlined" style={{margin: "10px"}}> Random Anime Quote </Button>
-            <Button id={"searchModeButtonB"} onClick={animeTitle} variant="outlined" style={{margin: "10px"}}> Anime Title </Button>
-            <Button id={"searchModeButtonC"} onClick={characterName} variant="outlined" style={{margin: "10px"}}>Character Name </Button>
+            <Button className={"link"} id={"searchModeButtonA"} onClick={random} variant="outlined"> Random Anime Quote </Button>
+            <Button className={"link"} id={"searchModeButtonB"} onClick={animeTitle} variant="outlined"> Anime Title </Button>
+            <Button className={"link"} id={"searchModeButtonC"} onClick={characterName} variant="outlined">Character Name </Button>
           </div>
         </div>
       </div>

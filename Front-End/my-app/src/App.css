@@ -14,34 +14,46 @@ h1 {
 
 #searchModeButtonA {
   display: inline;
+  margin: 0px 10px;
   padding: 15px;
+  width: 240px;
 }
 
 #searchModeButtonB {
   display: inline;
+  margin: 0px 10px;
   padding: 15px;
+  width: 240px;
 }
 
 #searchModeButtonC {
   display: inline;
+  margin: 0px 10px;
   padding: 15px;
+  width: 240px;
 }
 
 #searchModeButton2A {
   display: inline;
+  margin: 0px 10px;
   padding: 15px;
+  width: 240px;
   background-color: #AAAAAA;
 }
 
 #searchModeButton2B {
   display: inline;
+  margin: 0px 10px;
   padding: 15px;
+  width: 240px;
   background-color: #AAAAAA;
 }
 
 #searchModeButton2C {
   display: inline;
+  margin: 0px 10px;
   padding: 15px;
+  width: 240px;
   background-color: #AAAAAA;
 }
 
@@ -51,19 +63,17 @@ h1 {
   justify-content: center;
 }
 
-.dropdown {
+.link {}
 
-}
+.dropdown {transition: ease all .5s;}
 
-.dropdown-content {
-
-}
+.dropdown-content {}
 
 .dropdownbtn {
 	opacity: 0%;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
 
   .dropdown {float: left; overflow: hidden;}
   .dropdown .dropdownbtn {
@@ -72,10 +82,21 @@ h1 {
 		margin: 10px; 
 		width: 80px; 
 		height: 60px;}
-  .dropdown:hover .dropdown-content {display: block;}
-  .dropdown-content {display: none; position: absolute; background-color: white;}
-  .dropdown-content Button {float: none; display: block; }
-  #searchModeButton2A {background-color: #999999;}
-  #searchModeButton2B {background-color: #999999;}
-  #searchModeButton2C {background-color: #999999;}
+  .dropdown:hover .dropdown-content {display: block; pointer-events: auto; display: block;  transform: translateY(0px);}
+  .dropdown-content {
+    display: none;
+    width: 260px; 
+    position: absolute; 
+    background-color: white;
+    pointer-events: none;
+    transform: translateY(-10px); 
+    transition: display 300ms ease-in-out, transform 300ms ease-in-out;
+  }
+  /*.dropdown > .link:focus + .dropdown-content  {float: none; pointer-events: auto; display: block; transform: translateY(0px);  }*/
+  .dropdown-content Button {float: none; pointer-events: auto; display: block;  transform: translateY(0px);}
+  #searchModeButton2A {margin: 0 0; background-color: #999999;}
+  #searchModeButton2B {margin: 0 0; background-color: #999999;}
+  #searchModeButton2C {margin: 0 0; background-color: #999999;}
+
+  .dropdown:hover > .dropdown-content.menu {}
 }
