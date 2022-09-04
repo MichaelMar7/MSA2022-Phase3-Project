@@ -108,23 +108,44 @@ function App() {
 
   function random() {
     searchMode = "Random";
+    //console.log("A->2")
     document.getElementById("searchModeButtonA")!.id = "searchModeButton2A";
-    document.getElementById("searchModeButton2B")!.id = "searchModeButtonB";
-    document.getElementById("searchModeButton2C")!.id = "searchModeButtonC";
+    if (document.getElementById("searchModeButton2B")) {
+      //console.log("2->B")
+      document.getElementById("searchModeButton2B")!.id = "searchModeButtonB";
+    } else if (document.getElementById("searchModeButton2C")) {
+      //console.log("2->C")
+      document.getElementById("searchModeButton2C")!.id = "searchModeButtonC";
+    }
+    //console.log("DONE")
   }
 
   function animeTitle() {
     searchMode = "Anime Title";
+    //console.log("B->2")
     document.getElementById("searchModeButtonB")!.id = "searchModeButton2B";
-    document.getElementById("searchModeButton2A")!.id = "searchModeButtonA";
-    document.getElementById("searchModeButton2C")!.id = "searchModeButtonC";
+    if (document.getElementById("searchModeButton2A")) {
+      //console.log("2->A")
+      document.getElementById("searchModeButton2A")!.id = "searchModeButtonA";
+    } else if (document.getElementById("searchModeButton2C")) {
+      //console.log("2->C")
+      document.getElementById("searchModeButton2C")!.id = "searchModeButtonC";
+    }
+    //console.log("DONE")
   }
 
   function characterName() {
     searchMode = "Character Name";
+    //console.log("C->2")
     document.getElementById("searchModeButtonC")!.id = "searchModeButton2C";
-    document.getElementById("searchModeButton2B")!.id = "searchModeButtonB";
-    document.getElementById("searchModeButton2A")!.id = "searchModeButtonA";
+    if (document.getElementById("searchModeButton2B")) {
+      //console.log("2->B")
+      document.getElementById("searchModeButton2B")!.id = "searchModeButtonB";
+    } else if (document.getElementById("searchModeButton2A")) {
+      //console.log("2->A")
+      document.getElementById("searchModeButton2A")!.id = "searchModeButtonA";
+    }
+    //console.log("DONE")
   }
 
   function bgcSearchMode(searchMode: any) {
@@ -141,24 +162,29 @@ function App() {
         .then(res => res.json())
         .then(quote => setInputInfo(quote))
         //.then(quote => console.log(quote))
-      //console.log("Random")
+      console.log("Random")
 
     } else if (searchMode === "Anime Title") {
       fetch("https://animechan.vercel.app/api/quotes/anime?title=" + input)
         .then(res => res.json())
         .then(quotes => setInputInfo(quotes[Math.floor(Math.random() * quotes.length)]))
         //.then(quotes => console.log(quotes))
-      //console.log("animeTitle")
+      console.log("animeTitle")
     } else if (searchMode === "Character Name") {
       fetch("https://animechan.vercel.app/api/quotes/character?name=" + input)
         .then(res => res.json())
         .then(quotes => setInputInfo(quotes[Math.floor(Math.random() * quotes.length)]))
         //.then(quotes => console.log(quotes))
-      //console.log("characterName")
+      console.log("characterName")
     }
-    document.getElementById("searchModeButtonA")!.id = "searchModeButton2A";
-    document.getElementById("searchModeButton2B")!.id = "searchModeButtonB";
-    document.getElementById("searchModeButton2C")!.id = "searchModeButtonC";
+    if (document.getElementById("searchModeButton2B") || document.getElementById("searchModeButton2C")) {
+      document.getElementById("searchModeButtonA")!.id = "searchModeButton2A";
+      if (document.getElementById("searchModeButton2B")) {
+        document.getElementById("searchModeButton2B")!.id = "searchModeButtonB";
+      } else if (document.getElementById("searchModeButton2C")) {
+        document.getElementById("searchModeButton2C")!.id = "searchModeButtonC";
+      }
+    }
 }
 }
 

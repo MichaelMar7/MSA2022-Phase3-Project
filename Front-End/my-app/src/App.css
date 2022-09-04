@@ -42,7 +42,7 @@ h1 {
 #searchModeButton2C {
   display: inline;
   padding: 15px;
-  background-color: #FFAAAA;
+  background-color: #AAAAAA;
 }
 
 .navbar {
@@ -75,5 +75,7 @@ h1 {
   .dropdown:hover .dropdown-content {display: block;}
   .dropdown-content {display: none; position: absolute; background-color: white;}
   .dropdown-content Button {float: none; display: block; }
-  #searchModeButton2C {background-color: #FF9999;}
+  #searchModeButton2A {background-color: #999999;}
+  #searchModeButton2B {background-color: #999999;}
+  #searchModeButton2C {background-color: #999999;}
 }

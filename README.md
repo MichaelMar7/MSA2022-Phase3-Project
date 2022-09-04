@@ -4,7 +4,7 @@ This is my project for MSA 2022 Phase 3. I will be doing the same modules as I d
 
 ## Front-End Module
 
-I have continued using my Front-ENd apo from Phase 2 to make it easier.
+I have continued using my Front-End api from Phase 2 to make it easier.
 
 One change I made that is not related to the advanced features is a (still not perfect) way to visibily inciate the search mode of the api.
 
@@ -23,7 +23,7 @@ The API UI looks different when the screen width is less the 640px, which the bu
 
 My API is now cloud hosted on Vercel. Here is the link: https://msa-2022-phase3-project.vercel.app/
 
-## 
+###
 
 
 ## Data Science Module
