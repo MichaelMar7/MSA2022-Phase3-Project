@@ -18,7 +18,7 @@ function App() {
       <p>
         In API applicaiton allows the user to generate a <u> random anime quote from the API</u>, generate a random quote from a specific <u> Anime Title</u>, or generate a random quote from a specific <u> Anime Character</u>.
       </p>
-      <p> Now on Vercel!! https://msa-2022-phase3-project.vercel.app/ </p>
+      <p> Now cloud hosted on Vercel!! https://msa-2022-phase3-project.vercel.app/ </p>
 
       {/* Change without using mui */}
       {/*<Grid
