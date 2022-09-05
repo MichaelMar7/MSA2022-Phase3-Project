@@ -73,30 +73,78 @@ h1 {
 	opacity: 0%;
 }
 
-@media (max-width: 900px) {
+.searchbar {
+  margin-top: 10px;
+}
 
+.QuoteGrid {
+  padding: 5px
+}
+
+@media (max-width: 900px) {
+  .searchbar {margin-top: 120px;}
   .dropdown {float: left; overflow: hidden;}
   .dropdown .dropdownbtn {
     opacity: 100%;
 		display: inline-block;
 		margin: 10px; 
 		width: 80px; 
-		height: 60px;}
+		height: 60px;
+  }
   .dropdown:hover .dropdown-content {display: block; pointer-events: auto; display: block;  transform: translateY(0px);}
   .dropdown-content {
-    display: none;
+    opacity: 0;
+    display:block;
     width: 260px; 
     position: absolute; 
     background-color: white;
     pointer-events: none;
-    transform: translateY(-10px); 
-    transition: display 300ms ease-in-out, transform 300ms ease-in-out;
+    z-index:1;
+    transform: translateY(-50px); 
+    transition: opacity 200ms ease-in-out, transform 500ms ease-in-out;
   }
-  /*.dropdown > .link:focus + .dropdown-content  {float: none; pointer-events: auto; display: block; transform: translateY(0px);  }*/
-  .dropdown-content Button {float: none; pointer-events: auto; display: block;  transform: translateY(0px);}
+  .dropdown > .dropdownbtn:focus + .dropdown-content {float: none; display:block; pointer-events: auto; opacity: 1; transform: translateY(0px);  }
+  /*.dropdown-content Button {float: none; pointer-events: auto; display: block;  transform: translateY(0px);}*/
   #searchModeButton2A {margin: 0 0; background-color: #999999;}
   #searchModeButton2B {margin: 0 0; background-color: #999999;}
   #searchModeButton2C {margin: 0 0; background-color: #999999;}
 
   .dropdown:hover > .dropdown-content.menu {}
 }
+
+@media (max-width:480px) {
+  .QuoteGrid {
+    font-size: 14px;
+  }
+}
+
+/*
+.dropdownbtn {
+  width: 80px;
+  height: 80px;
+  color: white;
+}
+
+.dropdown > .dropdownbtn:focus,
+.dropdownbtn:hover {
+  color: black;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  padding: 10px;
+  background-color:grey;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown > .dropdownbtn:focus + .dropdown-content {
+  opacity: 1;
+  transform: translateY(0)
+}
+*/

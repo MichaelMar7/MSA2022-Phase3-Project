@@ -4,16 +4,17 @@ import SearchIcon from "@mui/icons-material/Search";
 import TextField from "@mui/material/TextField";
 import './App.css';
 import { Box, Button, Grid, Paper, Skeleton } from "@mui/material";
-//import {bounce} from "react-animations";
+import {bounce} from "react-animations";
+import styled, {keyframes} from "styled-components";
 
 function App() {
   const [input, setInput] = useState("");
   const [inputInfo, setInputInfo] = useState<undefined | any>(undefined);
-  //const Bounce = styled.div`animation: 2s ${keyframes `${bounce}`} infinite`
+  const Bounce = styled.div`animation: 4s ${keyframes `${bounce}`} infinite`
   let searchMode = "Random";
   return (
     <div style={{margin: "auto", width: "90%"}}>
-      <h1> Anime Random Quotes Displayer </h1>
+      <Bounce style={{margin: "50px"}}><h1> Anime Random Quotes Displayer </h1></Bounce>
       <p>
           This is an React Typescript API application that displays random quotes from anime provided by the third party API <strong style={{color:"green"}}> AnimeChan </strong> created by <strong> rocktimsaikia </strong>. The url for the api is <a href="https://animechan.vercel.app/"> https://animechan.vercel.app/</a>. 
       </p>
@@ -45,7 +46,7 @@ function App() {
       {/*</Grid>*/}
       <p style={{textAlign: "center", marginTop: "5px"}}> Remember to click on one of the three button before searching (otherwise it would default to "Random" after each search). </p>
 
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div className={"searchbar"} style={{ display: "flex", justifyContent: "center" }}>
         <TextField
           id="search-bar"
           className="text"
@@ -75,6 +76,7 @@ function App() {
           container
           direction="row"
           spacing={5}
+          className={"QuoteGrid"}
           sx={{
             width: "100%",
             margin: "20px auto",
@@ -89,6 +91,7 @@ function App() {
           container
           direction="row"
           spacing={5}
+          className={"QuoteGrid"}
           sx={{
             width: "100%",
             margin: "20px auto",
